@@ -24,12 +24,13 @@ jobs:
 
     - name: Build EXE
       run: |
-        pyinstaller --noconfirm --onedir --windowed --name "SpatialExplorer" --collect-all napari --collect-all vispy stats_img_vis.py
+        pyinstaller --noconfirm --onedir --windowed --name "SpatialExplorer" --collect-all napari --collect-all vispy stats_img_vis_ui.py
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
         name: SpatialExplorer-Windows-App
         path: dist/SpatialExplorer
+
 
 
